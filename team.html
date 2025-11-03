@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Woordraadspel - Team</title>
+<style>
+  body { font-family: Arial; text-align: center; margin: 20px; }
+  input { font-size: 20px; padding: 5px; text-transform: uppercase; }
+  button { font-size: 18px; padding: 5px 10px; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<h1>Woordraadspel - Team</h1>
+
+<input type="text" id="teamCode" placeholder="Teamcode" maxlength="2">
+<button onclick="loginTeam()">Login</button>
+
+<div id="game" style="display:none;">
+  <h2>Voer je 5-letter woord in:</h2>
+  <input type="text" id="guessInput" maxlength="5">
+  <button onclick="submitGuess()">Raden</button>
+  <p>Rondes gespeeld: <span id="roundCounter">0</span>/10</p>
+  <p>Pogingen deze ronde: <span id="attemptCounter">0</span>/5</p>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

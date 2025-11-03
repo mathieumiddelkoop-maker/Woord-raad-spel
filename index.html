@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Woordraadspel - Hoofdscherm</title>
+<style>
+  body { font-family: Arial; text-align: center; }
+  .row { display: flex; justify-content: center; margin: 5px 0; }
+  .tile { width: 50px; height: 50px; border: 1px solid #000; line-height: 50px; font-size: 24px; margin: 2px; text-transform: uppercase; }
+  .gray { background-color: lightgray; }
+  .yellow { background-color: gold; }
+  .green { background-color: lightgreen; }
+
+  #scoreboard { margin-top: 20px; }
+
+  #alphabet { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+  .letter { width: 30px; height: 30px; line-height: 30px; margin: 2px; border: 1px solid #000; text-align: center; text-transform: uppercase; }
+  .letter.gray { background-color: lightgray; color: white; }
+</style>
+</head>
+<body>
+
+<h1>Woordraadspel - Hoofdscherm</h1>
+<div id="board"></div>
+
+<h2>Alfabet</h2>
+<div id="alphabet"></div>
+
+<h2>Timer: <span id="timer">60</span>s</h2>
+
+<div id="scoreboard">
+  <h2>Scorebord</h2>
+  <ul id="scores"></ul>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
